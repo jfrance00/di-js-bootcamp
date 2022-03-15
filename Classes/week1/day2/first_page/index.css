@@ -1,0 +1,41 @@
+body {
+    width: 100%;
+}
+
+img {
+    width: 400px;
+    height: 300px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 6em;
+}
+
+h1 {
+    border-bottom: 1px solid gray;
+    padding: 1em;
+}
+
+h3 {
+    margin: 2em;
+    text-align: center;
+}
+
+table {
+    width: 1200px;
+    margin: auto;
+    align-items: center;
+}
+
+td, th {
+    border: 1px solid;
+}
+
+#tableHeader {
+    color: red;
+    border: 1px red;
+}
+
+ol {
+    list-style: upper-roman;
+}

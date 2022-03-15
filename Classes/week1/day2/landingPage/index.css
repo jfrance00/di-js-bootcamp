@@ -1,0 +1,73 @@
+html, body {
+    height: 100%;
+}
+
+#navbar {
+    display: flex;
+    background-color: #ebecf0;
+    justify-content: space-around;
+    align-items: center;
+    height: 50px;
+}
+
+#mainContent {
+    height: 60%;
+    display: flex;
+    background-image: url(https://images.pexels.com/photos/37403/bora-bora-french-polynesia-sunset-ocean.jpg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260);
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    color: white;
+    font-size: 170%;
+}
+
+input {
+    size: 2em;
+}
+
+#lowerBanner {
+    height: 40%;
+    background-color:  #ebecf0;
+    display: flex;
+    align-items: baseline;
+    justify-items: center;
+}
+
+.bannerContent {
+    display: flex;
+    margin: auto;
+    width: 220px;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+
+p {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+#signIn {
+    width: 140px;
+}
+
+input {
+    height: 30px;
+    border-radius: 2em;
+    /* font-size: 10px; */
+}
+
+.button {
+    background-color: lightblue;
+    border-radius: 6px;
+    height: 30px;
+    font-size: 16px;
+}
+
+h4 {
+    margin: 10px;
+}
+
+i {
+    margin: 20px;
+}

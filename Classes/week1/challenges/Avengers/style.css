@@ -1,0 +1,49 @@
+html, body {
+    padding: 0px;
+    margin: 0px;
+    background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQhvd_RGvN6C52sqliY76w573D3GVgOW-gOgQ&usqp=CAU);
+}
+
+#nav-list {
+    margin: 0px;
+    display: flex;
+    background-color: black;
+    color: white;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+    list-style: none;
+}
+
+.nav-item:first-child {
+    margin-right: auto;
+}
+
+li {
+    margin: 10px;
+    padding: 3px;
+}
+
+img {
+    height: 50px; 
+    width: 70px;
+}
+
+#main-content {
+    display: flex;
+    align-items: center;
+    justify-items: center;
+    flex-direction: column;
+    height: 300px;
+    width: 400px; 
+    background-color: black;
+    color: white;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 7rem;
+    text-align: center;
+}
+
+p {
+    margin: 5px;
+}
