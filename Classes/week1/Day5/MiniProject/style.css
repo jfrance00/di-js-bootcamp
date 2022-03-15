@@ -1,0 +1,43 @@
+html, body {
+    margin:0px;
+    background-color: lightgrey;
+}
+
+#nav-menu {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    background-color: white;
+
+}
+
+li {
+    display: inline;
+    margin: 2rem;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+#nav-logo {
+    margin-right: auto;
+}
+
+#logo {
+    width: 5rem;
+    height: 5rem;
+}
+
+footer {
+    background-color: white;
+    position: fixed;
+    bottom: 0;
+    width: 100%
+}
+
+#footer-text {
+    margin-left: auto;
+    margin-right: auto;
+}
