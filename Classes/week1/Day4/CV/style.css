@@ -1,0 +1,57 @@
+html, body {
+    margin:0;
+    background-color: lightgrey;
+}
+
+#pageContent {
+    margin: 2rem;
+    border:1px solid
+    padding:0;
+}
+
+#leftbar {
+    display: inline-block;
+    float: left;
+    margin-left: 0;
+    height:100%;
+    width:27%;
+    padding-left:1rem;
+}
+
+#rightbar {
+    display:inline-block;
+    float: right;
+    height:100%;
+    width: 63%;
+    padding:1rem;
+    margin-left: 1rem;
+}
+
+img {
+    height:18rem;
+    width:14rem;
+    border-radius:50%;
+    margin-left:auto;
+    margin-right: auto;
+}
+
+h1 {
+    border-top:1px solid;
+    margin-top:2rem;
+    padding-top:2rem;
+}
+
+h2 {
+    text-decoration: underline;
+}
+
+#education {
+    list-style: none;
+}
+
+
+#contact-info {
+    list-style: none;
+    margin-left:none;
+    margin-top:none;
+}
