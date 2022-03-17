@@ -5,7 +5,7 @@ html, body {
 
 #pageContent {
     margin: 2rem;
-    border:1px solid
+    border:1px solid;
     padding:0;
 }
 
@@ -46,12 +46,14 @@ h2 {
 }
 
 #education {
-    list-style: none;
+    list-style-type: none;
+    padding:0;
 }
 
 
 #contact-info {
-    list-style: none;
+    list-style-type: none;
+    padding:0;
     margin-left:none;
     margin-top:none;
 }
