@@ -66,8 +66,9 @@ h1 {
 #testimonials {
     display: flex;
     justify-content: space-around;
-    margin-top: 3em;
-    margin-bottom: 5em;
+    height: 40vh;
+    margin-top: 3em; 
+    padding: 0;
     
 }
 
@@ -100,10 +101,6 @@ img {
     margin-right: 112px;
     margin-top: 42px;
     border-radius: 50%;
-}
-
-#box1, #box3 {
-    align-self: flex-start;
 }
 
 #box2 {
