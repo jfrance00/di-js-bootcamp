@@ -1,0 +1,41 @@
+html, body {
+    height: 100vh;
+    width: 100%;
+}
+
+.container {
+    height: 100vh;
+    width: 100%;
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr;
+    gap: 3em;
+}
+
+/* Orange Grid */
+
+.container-orange {
+    height:30vh;
+}
+
+
+
+
+/* Gray Grid */
+
+.container-gray {
+    height:30vh;
+    display: grid;
+    gap: 1px;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+}
+
+
+
+
+/* Picnic Grid */
+
+.container-picnic {
+    height:30vh;
+}
+
