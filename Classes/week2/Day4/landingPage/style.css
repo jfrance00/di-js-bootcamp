@@ -1,0 +1,61 @@
+html, body {
+    height: 100vh;
+    width: 100%
+}
+
+.logo {
+    height: 5em;
+    width: 5em;
+}
+
+ul>a {
+    margin-right: auto;
+}
+
+.jumbotron {
+    background-image: url(https://wallpaperaccess.com/full/1657858.jpg);
+    background-size: cover;
+    height: 80vh;
+  }
+
+  .nav-link {
+      color: white;
+  }
+
+  .clear-button {
+      opacity: .5;
+      color: white;
+  }
+
+.lead {
+    color: white;
+    text-align: center;
+    font-size: xx-large
+}  
+
+.buttons {
+    display: flex;
+    justify-content: center;
+}
+
+.information-columns {
+    display: flex;
+    justify-content: center;
+    width: 70%;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.card {
+    border: 0;
+}
+
+
+.card-body {
+    flex-direction: column;
+    justify-content: center;
+} 
+
+.card-body>* {
+    margin: 1em;
+}
