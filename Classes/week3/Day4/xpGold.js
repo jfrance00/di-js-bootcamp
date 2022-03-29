@@ -35,3 +35,14 @@ if (grade > 90) {
 }
 
 // Exercise 3
+
+let verb = prompt("please enter a verb")
+
+if (verb.length > 3 && verb.slice(verb.length - 3) !== "ing") {
+    console.log(verb + "ing")
+} else if (verb.length > 3 && verb.slice(verb.length - 3) === "ing") {
+    console.log(verb + "ly")
+} else {
+    console.log(verb)
+}
+
