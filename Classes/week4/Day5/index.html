@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="">
+    </head>
+    <body>
+        <div id="navBar">
+            <ul>
+                <li><a href="#">Profile</a></li>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">My Friends</a></li>
+                <li><a href="#">Messenger</a></li>
+                <li><a href="#">My Pics</a></li>
+            </ul>
+        </div>
+        
+
+        <div id="container">Users:</div>
+        <ul class="list">
+          <li>John</li>
+          <li>Pete</li>
+        </ul>
+        <ul class="list">
+          <li>David</li>
+          <li>Sarah</li>
+          <li>Dan</li>
+        </ul>
+
+
+        <div>Users:</div>
+        <ul>
+          <li>John</li>
+          <li>Pete</li>
+        </ul>
+
+
+        <script src="script.js" async defer>
+            // Exercise 1
+            let menuDiv = document.getElementById("navBar");
+            menuDiv.setAttribute("id", "socialNetworkNavigation");
+
+            let list = document.getElementsByTagName("ul");  //would change to id given that there are two uls present
+            let newListItem = document.createElement("li");
+            newListItem.appendChild(document.createTextNode("Logout"));
+            list.appendChild(newListItem);
+
+            // Exercise 2
+
+            let lists = getElementsByClassName("list")
+            let listOne = lists[0]
+            let listTwo = lists[1]
+
+            listOne.innerHTML = "Richard";
+
+            let newText = "Julie";
+            for (let i = 0; i < lists.length; i++){
+                lists[i].innerHTML = newText;
+            }
+
+            for (let i = 0; i < lists.length; i++){
+                let newListItem = document.createElement("li");
+                let newText = document.createTextNode("Hey Students")
+                newListItem.appendChild(newText)
+                lists[i].appendChild(newListItem)
+            }
+
+            let namesSecondList = lists[1].querySelectorAll("li");
+            namesSecondList[1].remove()
+
+            // Exercise 3
+                Change the font size of the whole body.
+            
+            let div = document.querySelectorAll("div")
+            div[-1].style.backgroundColor = 'light-blue';
+            div.style.padding = "1em";
+            let selectUl = div[-1].firstchild;
+            let selectJohn = selectUl.firstchild;
+            selectJohn.innerHTML = "";
+            let selectPete = selectUl.lastchild;
+            selectPete.style.border = "1px solid black";
+            body.style.fontSize = "small";
+
+
+        </script>
+    </body>
+</html>
