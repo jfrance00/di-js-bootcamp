@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]>      <html class="no-js"> <!--<![endif]-->
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="">
+    </head>
+    <body>
+        <article>
+            <h1> Some Facts </h1>
+            <h2> The Chocolate </h2>
+            <h3> History of the chocolate </h3>
+            <p> Chocolate is made from tropical Theobroma cacao tree seeds. 
+            Its earliest use dates back to the Olmec civilization in Mesoamerica.</p>
+            <p> After the European discovery of the Americas, chocolate became 
+            very popular in the wider world, and its demand exploded. </p>
+            <p> Chocolate has since become a popular food product that millions enjoy every day, 
+            thanks to its unique, rich, and sweet taste.</p> 
+            <p> But what effect does eating chocolate have on our health?</p> 
+        </article>
+        
+        <script>
+            // Exercise 1
+            console.log(document.getElementsByTagName("h1"));
+
+//<!-- Using DOM methods, remove the last paragraph in the <article> tag.
+            let arrArticle = document.getElementsByTagName("article");
+            let article = arrArticle[0]
+            console.log(article);
+            let removeArticle = article.removeChild(article.lastElementChild);
+//Add a event listener which will change the background color of the h2 to red, when it’s clicked on.
+            let h2Tags = document.getElementsByTagName("h2");
+            let desiredH2 = h2Tags[0];
+            let changeBackground = () => desiredH2.style.backgroundColor = "red";
+            article.addEventListener("click", changeBackground);
+//Add an event listener which will hide the h3 when it’s clicked on (use the display:none property).
+            let h3Tags = document.getElementsByTagName("h3");
+            let desiredH3 = h3Tags[0];
+            let changeDisplay = () => desiredH3.style.display = "none";
+            desiredH3.addEventListener("click", changeDisplay);
+
+//Add a <button> to the HTML file, that when clicked on, should make the text of all the paragraphs, bold.
+
+            let button = document.createElement("button");
+            let fetchBody = document.getElementsByTagName("body");
+            body = fetchBody[0];
+            body.appendchild(button);
+            let allBold = () => console.log("function triggered for Button");
+            button.addEventListener("click", allBold);
+
+        </script>
+    </body>
+</html>
