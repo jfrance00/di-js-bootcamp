@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <meta charset="utf-8" />
+  <title>Challenge: Mad Libs</title>
+  <link rel="stylesheet" href="styles.css">
+ </head>
+ <body>
+
+    <h1>Mad Libs</h1>
+
+    <ul>
+      <form id="form">
+        <li>Noun: <input type="text" name="noun" id="noun"></li>
+        <li>Adjective: <input type="text" name="adjective" id="adjective"></li>
+        <li>Someone's Name: <input type="text" name="person" id="person"></li>
+        <li>Verb: <input type="text" name="verb" id="verb"></li>
+        <li>A place: <input type="text" name="place" id="place"></li>
+        <input id="lib-button" type="button" value="Submit">
+      </form>
+    </ul>
+
+
+    <p>Generated story: 
+    <span id="story">
+    One day Jenn was out with her <span class="userInput" id="storyNoun"></span>. Her Brother came and asked for a <span class="userInput" id="storyAdj"></span> beverage.
+    <span class="userInput" id="personName"></span> drove up from valley and asked if they wanted to <span class="userInput" id="verb"></span>. Jenn agreed and they all went to <span class="userInput" id="place"></span>
+    </span>
+    </p>
+
+    <script>
+      let story = document.getElementById("story");
+      let form = document.getElementById("form");
+      let noun = document.getElementById("noun");
+      let userInput = document.getElementsByClassName("userInput");
+
+      console.log(userInput);
+
+      let checkInput = (userEntry) => userEntry.length > 0 ? true : false; 
+
+      function fillForm(){
+        for (i = 0; i < form.length-1 ;i++) {       // form.length-1 to avoid the submit button input
+          if (checkInput(form.elements[i].value)){
+            userInput[i].innerHTML = form.elements[i].value;
+          } else {
+            alert("please fill all fields");
+            return false;
+            break;
+          }
+        }
+      }
+      
+      function submitData(){
+        let isFormFilled = fillForm();
+        if (isFormFilled != false){
+          displayStory();
+        }
+      }
+
+      let displayStory = () => story.style.display = "inline";
+
+      let button = document.getElementById("lib-button");
+      button.addEventListener("click", submitData);
+
+    </script>
+
+ </body>
+</html>
