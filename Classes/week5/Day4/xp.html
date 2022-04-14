@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+    <html>
+    <head>
+        <style>
+        .container {
+          width: 400px;
+          height: 400px;
+          position: relative;
+          background: yellow;
+        }
+        #animate {
+          width: 50px;
+          height: 50px;
+          position: absolute;
+          background-color: red;
+        }
+        </style>
+    </head>
+    <body>
+        <p><button onclick="myMove()">Click Me</button></p>
+        <div class="container">
+          <div id="animate" draggable="true"></div>
+        </div>
+        <div class="container" style="background-color: aqua;"></div>
+
+    <script>
+        const draggableItem = document.getElementById("animate"); 
+
+        // Move box right on click
+        draggableItem.addEventListener("click", moveRight)
+
+        function moveRight() {
+            let start = Date.now(); // start date
+
+            let timer = setInterval(function() {
+                let timePassed = Date.now() - start;
+                console.log(timePassed)
+                draggableItem.style.left = timePassed / 5 + 'px';
+                if (timePassed > 1745) {
+                clearInterval(timer);
+                    }
+                }, 20);
+            };
+
+        // click and drag box  
+        draggableItem.addEventListener("dragstart", e => {
+            e.dataTransfer.setData("text/plain", draggableItem.id);
+            console.log(`initial drag: ${e}`);
+        });   
+
+        for (const zone of document.querySelectorAll(".container")){
+            zone.addEventListener("dragover", e => {
+                e.preventDefault();
+            })
+
+            zone.addEventListener("drop", e => {
+                e.preventDefault();
+                const droppedElementId = e.dataTransfer.getData("text/plain text");
+                zone.appendChild(draggableItem);
+            });
+        };
+          
+               
+    </script>    
+    </body>
+    </html>
