@@ -37,3 +37,5 @@ function printMessage(words, width){
     }
     printTopBottomFrame(findlongestStringLength(wordsLength))
 }
+
+printMessage(wordsArray, width);
