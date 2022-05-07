@@ -32,3 +32,13 @@ sortArray();
 console.log(removeRepeats());
 
 
+// Exercise 3
+
+let sample = [NaN, 0, 15, false, -22, '',undefined, 47, null];
+// Expected result : [15, -22, 47]
+
+let checkElements = element => element != null || element !="" || element != false ||element != undefined || element != NaN;  
+
+let filtered = sample.filter(checkElements);
+
+// Write a JavaScript function to remove: null, 0, "", false, undefined and NaN values from an array.

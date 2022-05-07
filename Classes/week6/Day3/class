@@ -1,0 +1,21 @@
+let famillyMember = [
+    { name: "john", title: "dad", age: 30 },
+    { name: "jane", title: "mom", age: 35 },
+    { name: "bob", title: "son", age: 6 },
+  
+  ]
+  
+  
+  
+  let MyFamilym = famillyMember.reduce((prvious, current) => {
+    console.log(current)
+    prvious[current.title] = current
+    return prvious
+  }, {})
+  
+  
+  
+  console.log(MyFamilym)
+  
+  
+  console.log(MyFamilym.dad)
