@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="">
+    </head>
+    <body>
+        <!-- Exercise 1 -->
+            <div id="form1">
+                <h3>Exercise 1</h3>
+                <form method="get">
+                    <label for="name">Name</label>
+                    <input type="text" name="name" value="name">
+
+                    <label for="comments">Comments</label>
+                    <textarea name="comments">Comments</textarea>
+
+                    <input type="submit" value="send">
+                </form>
+                <!-- Sent data will appear in URL-->
+            </div>
+
+
+        <!-- Exercise 2 -->
+        <div id="form2">
+            <h3>Exercise 2</h3>
+            <form method="post">
+                <label for="name">Name</label>
+                <input type="text" name="name" value="name">
+
+                <label for="comments">Comments</label>
+                <textarea name="comments">Comments</textarea>
+
+                <input type="submit" value="send">
+            </form>
+            <!-- Sent data will appear in body of http request, specifically formdata-->
+        </div>
+        
+        <script>
+            // Exercise 3
+
+            let marioGame = {
+                detail : "An amazing game!",
+                characters : {
+                    mario : {
+                      description:"Small and jumpy. Likes princesses.",
+                      height: 10,
+                      weight: 3,
+                      speed: 12,
+                    },
+                    bowser : {
+                      description: "Big and green, Hates princesses.",
+                      height: 16,
+                      weight: 6,
+                      speed: 4,
+                    },
+                    princessPeach : {
+                      description: "Beautiful princess.",
+                      height: 12,
+                      weight: 2,
+                      speed: 2,
+                    }
+                },
+              }
+
+// Convert this JS object into a JSON object. What happens to the nested objects ?
+let uglyData = JSON.stringify(marioGame);
+console.log(`uglyData: ${uglyData}`)
+// Convert and pretty print this JS object into a JSON object. Hint : Check out the JSON lesson on the platform.
+let prettyData = JSON.stringify(marioGame, null, 2);
+console.log(`prettyData: ${prettyData}`)     
+// prettyData = undefined;                          if uncommented will display catch error
+try {
+    let prettyDataJS = JSON.parse(prettyData);
+    console.log(prettyDataJS);
+} catch (e) {
+    console.log(e);
+}
+
+// Use your web inspector to add a breakpoint. Check the values of the JSON object in the debugger.
+
+
+
+
+
+        </script>
+    </body>
+</html>
