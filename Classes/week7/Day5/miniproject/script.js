@@ -79,6 +79,7 @@ const robots = [
 
 
     const searchBar = document.getElementById("searchBar");
+    const displaySection = document.getElementById("displaySection"); 
 
 
     // Display card and append to display div
@@ -93,10 +94,14 @@ const robots = [
             this.username = username; 
             this.email = email; 
             this.image = image;
+            this.cardDiv = document.createElement("div"); 
+            this.shown = true;
+            // this.displaySection = document.getElementById("displaySection");  // correct to put displayt in the class object since it is shared by all objects?
+
         }
 
         createHTML(){
-            let displaySection = document.getElementById("displaySection");
+            console.log(`createHTML called`);
 
             let robotName = document.createElement("h5");
             robotName.textContent = this.name;
@@ -113,31 +118,34 @@ const robots = [
             image.setAttribute("class", "card-img0-top");
             image.setAttribute("alt", "robot-picture");
     
-            let cardDiv = document.createElement("div"); 
-            cardDiv.setAttribute("class", "card");
-            cardDiv.setAttribute("style", "width: 18rem;");
+            this.cardDiv.setAttribute("class", "card");
+            this.cardDiv.setAttribute("style", "width: 18rem;");
             
             textDiv.appendChild(robotName);
             textDiv.appendChild(text);
-            cardDiv.appendChild(image);
-            cardDiv.appendChild(textDiv);
-            displaySection.appendChild(cardDiv);    
+            this.cardDiv.appendChild(image);
+            this.cardDiv.appendChild(textDiv);
+            displaySection.appendChild(this.cardDiv);    
         }
         
 
         show(){
-            console.log(`show card`)
+            console.log(`Show() called`)
+            displaySection.appendChild(this.cardDiv);
+            this.shown = true;
         };
         hide(){
-            console.log('hide card')
+            console.log(`hide() called`)
+            this.cardDiv.remove();  
+            this.shown = false;          
         }
     }
 
     searchBar.addEventListener("input", (e) => {
         let userSearch = e.target.value;
-        robotInstances = robotsInstances.filter(character => character.name.includes(userSearch));
-        console.log(robotInstances);
-        robotInstances.map(character => character.createHTML());
+        let robotSearch = robotsInstances.filter(character => character.name.includes(userSearch));
+        robotsInstances.map(robot => (!robotSearch.includes(robot)) ? robot.hide() : null)               // hides robots not in search list this code is repetative, how to reduce it?
+        robotsInstances.map(robot => (robotSearch.includes(robot) && !robot.shown) ? robot.show() : null)  // shows robots that were hidden but re-added to search
     })
 
     robotsInstances = robots.map(character => {            // Start program creates an array of class objects and displays card
