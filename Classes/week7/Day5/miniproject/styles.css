@@ -1,0 +1,21 @@
+html, body {
+    height: 100vh;
+    width: 100vw;
+}
+
+#displaySection {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 3rem;
+    justify-content: center;
+    align-content: center;
+}
+
+.card {
+    margin: 1rem;
+}
+
+img {
+    height: 10rem;
+    width: 10rem;
+}
