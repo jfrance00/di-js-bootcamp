@@ -78,8 +78,7 @@ const robots = [
 // View
 
 
-    // Make reusable card variable **use class because there will be multiple
-
+    const searchBar = document.getElementById("searchBar");
 
 
     // Display card and append to display div
@@ -89,17 +88,17 @@ const robots = [
 
     class Robot {
         constructor(id, name, username, email, image){
-            this.id = id 
-            this.name = name 
-            this.username = username 
-            this.email = email 
-            this.image = image 
+            this.id = id; 
+            this.name = name; 
+            this.username = username; 
+            this.email = email; 
+            this.image = image;
         }
 
         createHTML(){
             let displaySection = document.getElementById("displaySection");
 
-            let robotName = document.createElement("h4");
+            let robotName = document.createElement("h5");
             robotName.textContent = this.name;
     
             let text = document.createElement("p");
@@ -134,7 +133,14 @@ const robots = [
         }
     }
 
-    robotsInstances = robots.map(character => {            // creates an array of class objects and displays card
+    searchBar.addEventListener("input", (e) => {
+        let userSearch = e.target.value;
+        robotInstances = robotsInstances.filter(character => character.name.includes(userSearch));
+        console.log(robotInstances);
+        robotInstances.map(character => character.createHTML());
+    })
+
+    robotsInstances = robots.map(character => {            // Start program creates an array of class objects and displays card
         character = Object.values(character);
         let [id, name, username, email, image] = character;
         newRobot = new Robot(id, name, username, email, image);
@@ -142,6 +148,7 @@ const robots = [
         return newRobot;
     });        
 
-    // Access robot data and populate it into card 
-    // onload -> display all cards
+
+
+
     // Search function -> filters cards to display
