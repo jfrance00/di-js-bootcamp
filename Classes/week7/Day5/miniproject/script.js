@@ -144,6 +144,11 @@ const robots = [
     searchBar.addEventListener("input", (e) => {
         let userSearch = e.target.value;
         let robotSearch = robotsInstances.filter(character => character.name.includes(userSearch));
+        //1- why do you loop twice in the saarray ? you do wriite a ternary test to define if you must or not hide the element you don't want, 
+        //then instead of returning null after the ":" you could run the second method.
+        //2- why do you filter the array according to the match instead of running the test of the match in the loop that decide if you hide or show the current element ?
+        //3-why a map method ? do you need the element to be stored in an array at the end of the loop ?
+        // would'mt a foreach be enaugh ?
         robotsInstances.map(robot => (!robotSearch.includes(robot)) ? robot.hide() : null)               // hides robots not in search list this code is repetative, how to reduce it?
         robotsInstances.map(robot => (robotSearch.includes(robot) && !robot.shown) ? robot.show() : null)  // shows robots that were hidden but re-added to search
     })
